@@ -1,0 +1,19 @@
+Classes:
+    1. Entry
+        Behaviors:
+            - Display Entry Details
+        Objects:
+            _response (string)
+            _date (string)
+            _prompt (string)
+
+
+    2. Journal
+        Behaviors:
+            - Add entry
+            - Display all entries
+            - Save to a file
+            - Load from a file
+
+        Objects:
+            _entries (List)
