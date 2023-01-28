@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Text;
 
 public class Entry 
 {   
@@ -7,8 +9,8 @@ public class Entry
     public string _prompt;
     public void DisplayEntryDetails()
     {
-        Console.WriteLine($"Date: {_date} - Prompt: {_prompt}");
-        Console.WriteLine($"{_response}");
         Console.WriteLine("");
+        Console.WriteLine($"Date: {_date} - Prompt: {_prompt}");
+        Console.WriteLine($"Response: {_response}");
     }
 }
