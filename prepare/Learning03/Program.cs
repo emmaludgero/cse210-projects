@@ -5,8 +5,6 @@ class Program
     static void Main(string[] args)
     {
         Fraction myFraction1 = new Fraction();
-        
-        
 
         Fraction example1 = new Fraction();
         example1.SetTop(1);

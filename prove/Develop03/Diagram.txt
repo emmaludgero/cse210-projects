@@ -1,0 +1,90 @@
+What the program does?
+    Help people to memorize a scripture verse(s) by displaying the scripture and missing words by pressing the enter key.
+
+Inputs:
+    1. Type the word "quit"
+    2. Press enter
+
+Outputs:
+    1. By pressing the enter, random words of the text will be hide. 
+    2. The console must remain clear and display the scripture again in each pressing enter. 
+    3. By typing "quit", the program will finish.
+    4. By pressing enter until the the scripture is fully empty, the program will finish. 
+
+When it ends?
+    When the user types "quit" or the scripture is completely hidden.
+
+
+CLASSES:
+
+    Scripture class: keep track of the scripture and reference. It will hide the words and display the rendered scripture.
+    Words class: tell us if the word is hidden or shown.
+    Reference class: it will display the reference in this format: "John 3:16"
+
+
+BEHAVIORS:
+
+    Scripture:
+        Hide Words: it will take a random word and transform the word into underscores "_" with the purpose of hide it to the user. While the user keeps pressing the enter key.
+        GetRenderedText: it will display the text with the hidden words to the terminal
+        IsCompletelyHidden: it will verify if the rendered text is fully empty. If it is, it will end the program. Otherwise, the program will continue. 
+
+    Word:
+        Hide: it will tell if the word is hidden 
+        Show: it will tell if the word is still displaying
+
+    Reference:
+        Recognize: display the reference of the scripture 
+
+
+ATTRIBUTES:
+
+    Scripture:
+        private string _reference;
+        private string _singleVerse;
+
+    Word:
+        private List<string> _hiddenWords = new List<string>();
+        private List<string> _shownWords = new List<string>();
+
+    Reference:
+        private string _book;
+        private string _chapter;
+        private string _verse; 
+        private string _endVerse;
+
+
+CONSTRUCTOR:
+
+    Scripture:
+        public Scripture()
+        {
+           "it will have a default scripture defined" 
+        }
+
+        public Scripture(string reference, string verse)
+        {
+            "it will accept two parameters to create the scripture"
+        }
+
+    Word:
+        public Word(List<string> word)
+        {
+            "it will take a word and added to the _hiddenWords list automatically"
+        }
+
+    Reference:
+        public Reference()
+        {
+            "it will define a reference by default"
+        }
+
+        public Reference(string book, int chapter, int verse)
+        {
+            "it will accept three values to construct a reference"
+        }
+
+        public Reference(string book, int chapter, int verse, int endVerse)
+        {
+            "it will accept four values to construct a reference"
+        }
