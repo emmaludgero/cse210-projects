@@ -1,0 +1,84 @@
+Mindfulness Program
+
+Classes:
+
+    Activity Class(parent class):
+
+        Behaviors:
+
+            displayStartingMessage
+            displayEndindMessage
+            pausingSpinner(seconds)
+            pausingCountdown(seconds)
+
+        Attributes:
+
+            _activityName
+            _description
+            _duration
+
+        Constructors:
+
+            Activity(string activityName, string description, int duration)
+            {
+                _activityName = acitivityName;
+                _description = description;
+                _duration = duration;
+            }
+    
+    BreathingActivity Class(child class):
+
+        Behaviors:
+
+            displayBreathing
+
+        Attributes:
+            
+            (same from Acitivity Class)
+
+        Constructors:
+
+            BreathingActivity(string acitivityName, string description, int duration) : base (acitivityName, description, duration)
+
+
+    ReflectingActivity Class(child class):
+
+        Behaviors:
+
+            displayRandomPrompt
+            displayRandomReflectionQuestion
+
+        Attributes:
+
+            _promptList
+            _reflectionQuestionsList
+
+        Constructors:
+
+            ReflectingActivity(string acitivityName, string description, int duration) : base (acitivityName, description, duration)
+            ReflectingActivity(string acitivityName, string description, int duration, list promptList, list reflectionQuestionsList) : base (acitivityName, description, duration)
+            {
+                _promptList = promptList;
+                _reflectionQuestionsList = reflectionQuestionsList;
+            }
+
+    ListingActivity Class(child class):
+
+        Behaviors:
+
+            displayRandomPrompt
+            askToListItems
+            displayItemsNumber
+
+        Attributes:
+
+            _promptList
+            _itemsListed
+
+        Constructors:
+
+            ListingActivity(string acitivityName, string description, int duration) : base (acitivityName, description, duration)
+            ListingActivity(string acitivityName, string description, int duration, list promptList) : base (acitivityName, description, duration)
+            {
+                _promptList = promptList;
+            }
