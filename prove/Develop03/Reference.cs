@@ -29,4 +29,14 @@ public class Reference {
         _endVerse = endVerse;
     }
 
+    public void DisplayOneVerseReference(){
+
+        Console.WriteLine($"{_book} {_chapter}:{_verse}");
+    }
+
+    public void DisplayMultiVersesReference(){
+
+        Console.WriteLine($"{_book} {_chapter}:{_verse}-{_endVerse}");
+    }
+
 }

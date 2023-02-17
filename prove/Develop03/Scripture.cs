@@ -21,7 +21,7 @@ public class Scripture {
 
     private void HideWords()
     {
-
+        
     }
 
     private void GetRenderedText()
