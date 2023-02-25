@@ -6,10 +6,10 @@ Classes:
 
         Behaviors:
 
-            displayStartingMessage
-            displayEndindMessage
-            pausingSpinner(seconds)
-            pausingCountdown(seconds)
+            DisplayStartingMessage
+            DisplayEndindMessage
+            PausingSpinner(seconds)
+            PausingCountdown(seconds)
 
         Attributes:
 
@@ -30,7 +30,7 @@ Classes:
 
         Behaviors:
 
-            displayBreathing
+            DisplayBreathing
 
         Attributes:
             
@@ -45,8 +45,8 @@ Classes:
 
         Behaviors:
 
-            displayRandomPrompt
-            displayRandomReflectionQuestion
+            DisplayRandomPrompt
+            DisplayRandomReflectionQuestion
 
         Attributes:
 
@@ -66,9 +66,9 @@ Classes:
 
         Behaviors:
 
-            displayRandomPrompt
-            askToListItems
-            displayItemsNumber
+            DisplayRandomPrompt
+            AskToListItems
+            DisplayItemsNumber
 
         Attributes:
 
