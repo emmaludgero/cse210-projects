@@ -1,6 +1,6 @@
 public class ReflectingActivity : Activity{
 
-    public List<string> _promptList = new List<string>{
+    private List<string> _promptList = new List<string>{
         "Think of a time when you stood up for someone else.", 
         "Think of a time when you did something really difficult.", 
         "Think of a time when you helped someone in need.", 
@@ -36,7 +36,6 @@ public class ReflectingActivity : Activity{
         Console.WriteLine("");
         Console.WriteLine("When you have something in mind, press enter to continue.");
         Console.ReadKey();
-        
     }
 
     public void DisplayRandomReflectionQuestion(){
@@ -61,7 +60,6 @@ public class ReflectingActivity : Activity{
                 break;
             }
 
-        } while (true);
-        
+        } while (true); 
     }
 }

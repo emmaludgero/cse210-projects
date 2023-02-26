@@ -40,10 +40,8 @@ class Program
                 activity2.DisplayStartingMessage();
                 activity2.PausingSpinner("Get ready...");
                 Console.WriteLine("");
-                
                 activity2.DisplayRandomPrompt();
                 activity2.DisplayRandomReflectionQuestion();
-
                 activity2.DisplayEndindMessage();
             }
 
@@ -55,17 +53,12 @@ class Program
                 activity3.DisplayStartingMessage();
                 activity3.PausingSpinner("Get ready...");
                 Console.WriteLine("");
-
+                activity3.DisplayRandomPrompt();
+                activity3.AskToListItems();
+                activity3.DisplayItemsNumber();
+                Console.WriteLine("");
                 activity3.DisplayEndindMessage();
             }
-
-
-
-
-
-
-
-
         }
     }
 }

@@ -64,9 +64,4 @@ public class Activity {
             Console.Write("\b \b");
         }
     }
-
-
-
-
-
 }
