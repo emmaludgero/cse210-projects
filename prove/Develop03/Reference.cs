@@ -1,17 +1,18 @@
 using System;
 
-public class Reference {
+class Reference 
 
+{
     private string _book;
     private int _chapter;
-    private int _verse;   
-    private int _endVerse; 
+    private int _verse; 
+    private int _endVerse;
 
     public Reference()
     {
-        _book = "John";
+        _book = "1 Nefi";
         _chapter = 3;
-        _verse = 16;
+        _verse = 7;
     }
 
     public Reference(string book, int chapter, int verse)
@@ -29,14 +30,17 @@ public class Reference {
         _endVerse = endVerse;
     }
 
-    public void DisplayOneVerseReference(){
-
-        Console.WriteLine($"{_book} {_chapter}:{_verse}");
+    public string DisplayReference()
+    {
+        return ($"{_book} {_chapter}:{_verse}");
+         
     }
 
-    public void DisplayMultiVersesReference(){
-
-        Console.WriteLine($"{_book} {_chapter}:{_verse}-{_endVerse}");
+    public string DisplayBigReference()
+    {
+        return ($"{_book} {_chapter}:{_verse}-{_endVerse}");
     }
 
 }
+
+

@@ -1,38 +1,25 @@
 using System;
 
-public class Scripture {
+class Scripture 
 
-
-    private string _reference;
+{
     private string _singleVerse;
-    private List<string> _rangeVerse = new List<string>();
+
+    private List<string> _words = new List<string>();
+
+
+    public Scripture(string singleVerse)
+    {
+        _singleVerse = singleVerse;
+    }
 
     public Scripture()
     {
-        _reference = "John 3:16";
-        _singleVerse = "For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life.";
+        _singleVerse = "And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them.";
     }
 
-    public Scripture(string reference, string verse)
+    public void DisplayScripture(string reference)
     {
-        _reference = reference;
-        _singleVerse = verse;
+        Console.WriteLine($"{reference} {_singleVerse}");
     }
-
-    private void HideWords()
-    {
-        
-    }
-
-    private void GetRenderedText()
-    {
-        
-    }
-
-    private void IsCompletelyHidden()
-    {
-
-    }
-
-
 }

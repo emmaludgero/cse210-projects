@@ -2,27 +2,31 @@ using System;
 
 public class Word {
 
-    private List<string> _hiddenWords = new List<string>();
-    private List<string> _shownWords = new List<string>();
+    private List<string> _words = new List<string>();
 
-    public Word(List<string> word)
+    public Word(string verse)
     {
-        _hiddenWords = word;
+        string[] splitedVerse = verse.Split(" ");
+        foreach (string word in splitedVerse)
+        {
+            _words.Add(word);
+        }
     }
 
     public void Hide()
     {
-
+        var random = new Random();
+        int index = random.Next(_words.Count);
+        string randomWord = _words[index];
+        string novaString = randomWord.Replace(randomWord, new string('_', randomWord.Length));
+        _words[index] = novaString;
     }
 
-    public void Show()
-    {
-
-    }
-
-    public void IsHidden()
-    {
-
+    public void DisplayWords(string reference)
+    {   
+        Console.Write($"{reference} ");
+        foreach (string word in _words)
+        Console.Write($"{word} ");
     }
 
 }

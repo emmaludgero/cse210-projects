@@ -34,7 +34,7 @@ public class ListingActivity : Activity{
         
         int speed = 0;
         do {    
-            if (speed < _duration){
+            if (speed <= _duration){
                 
                 Console.Write("> ");
                 var item = Console.ReadLine();
