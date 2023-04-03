@@ -3,6 +3,7 @@ using System;
 class Program
 {
     // \r\n cria uma nova linha
+    // Link: https://www.wanderlustworker.com/setting-s-m-a-r-t-e-r-goals-7-steps-to-achieving-any-goal/
     static void Main(string[] args)
     {
         Console.WriteLine("Hello! Welcome to SMARTER Goals Creator \r\n");
