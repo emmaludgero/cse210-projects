@@ -22,11 +22,6 @@ public class SimpleGoal : Goal {
         _points = int.Parse(pointsString);
 
         _isCompleted = false;
-
-        _goalsList.Add(new string[,]
-        {
-            {_goalType, _goalName, _description, pointsString}
-        });
     }
 
 }

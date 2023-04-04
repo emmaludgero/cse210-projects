@@ -2,8 +2,6 @@ using System;
 
 public class ChecklistGoal : Goal {
 
-    
-
     public ChecklistGoal(string goalType){
         _goalType = goalType;
     }
@@ -30,10 +28,5 @@ public class ChecklistGoal : Goal {
         Console.WriteLine("What is the bonus for accomplishing it that many times? ");
         string bonusString  = Console.ReadLine();
         _bonus = int.Parse(bonusString);
-
-        _goalsList.Add(new string[,]
-        {
-            {_goalType, _goalName, _description, pointsString, timesString, bonusString}
-        });
     }
 }

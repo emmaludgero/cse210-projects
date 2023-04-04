@@ -19,10 +19,5 @@ public class EternalGoal : Goal {
         Console.WriteLine(_pointsQuestion);
         string pointsString  = Console.ReadLine();
         _points = int.Parse(pointsString);
-
-        _goalsList.Add(new string[,]
-        {
-            {_goalType, _goalName, _description, pointsString}
-        });
     }
 }
