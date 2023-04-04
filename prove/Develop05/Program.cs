@@ -101,7 +101,7 @@ class Program
                         if (goal is SimpleGoal){
                             outputFile.WriteLine($"{goal},{goal._goalName},{goal._description},{goal._points},{goal._isCompleted}");
                         }
-                        else {
+                        if (goal is EternalGoal) {
                             outputFile.WriteLine($"{goal},{goal._goalName},{goal._description},{goal._points}");
                         }
                     }
