@@ -4,12 +4,12 @@ public class Reward : Goal {
 
     private string _reward;
 
-    public Reward (string description, string reward) : base (description){
-        _reward = reward;
-    }
+    public Reward (string description, List<string> questions) : base (description, questions){}
 
     public override void CreateCharacteristic()
     {
-        
+        Console.WriteLine($"R -> {_description}");
+        Console.WriteLine("\r\n");
+        DisplayQuestions();
     }
 }
