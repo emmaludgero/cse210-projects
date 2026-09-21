@@ -1,9 +1,18 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Prep4 World!");
+        List<string> shoppingList = new List<string>();
+        shoppingList.Add("Strawberry");
+        shoppingList.Add("Milk");
+
+        foreach (string food in shoppingList)
+        {
+            Console.WriteLine(food);
+        }
+        
     }
 }
