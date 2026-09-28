@@ -8,8 +8,15 @@ class Program
     {
         return x + y;
     }
+
+    static void DisplayGreeting(string name)
+    {
+        Console.WriteLine($"Welcome {name}, pleased to meet you!");
+    }
     static void Main(string[] args)
     {
+        Console.WriteLine(AddNumbers(3.4, 1));
+        DisplayGreeting("Emma");
         /* Console.WriteLine("Hello Beautiful Girl!!");*/
 
        /* bool done = false;
