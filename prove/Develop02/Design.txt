@@ -1,0 +1,29 @@
+Program:
+        The pogram will start with a new Journal class, which will access the Entry class to create this jornal.
+        The program will do a do while loop, display the users choices, and according to the choice it will do its actions
+        If it's 1, it will use the AddEntry() method
+        If it's 2, it will DisplayEntries() method
+        If it's 3, it will prompt for a file name and use LoadFile() method
+        If it's 4, it will prompt for a file name and use SaveFile() method
+        If it's 5, it will break the loop and finish the program
+
+Classes:
+
+    1. Entry
+        Behaviors:
+            - DisplayEntryDetails(): void
+        Objects:
+            _response: (string)
+            _date: (string)
+            _prompt: (string)
+
+
+    2. Journal
+        Behaviors:
+            - AddEntry(): void
+            - DisplayEntries(): void 
+            - SaveFile(): void
+            - LoadFile(): void
+
+        Objects:
+            _entries (List)
