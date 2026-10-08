@@ -8,7 +8,7 @@ public class Journal
 
     public void AddEntry()
     {
-        List<string> _prompts = new List<string> {"Who was the most interesting person I interacted with today?", "What was the best part of my day?", "How did I see the hand of the Lord in my life today?", "What was the strongest emotion I felt today?", "If I had one thing I could do over today, what would it be?", "What make me happy today?", "What could I learn about Jesus today?"};
+        List<string> _prompts = new List<string> {"Who was the most interesting person I interacted with today?", "What was the best part of my day?", "How did I see the hand of the Lord in my life today?", "What was the strongest emotion I felt today?", "If I had one thing I could do over today, what would it be?", "What made me happy today?", "What could I learn about Jesus today?"};
 
             Random r = new Random();
             int index = r.Next(_prompts.Count);
@@ -34,39 +34,40 @@ public class Journal
         {
             entry.DisplayEntryDetails();
         }
-    }
-
-    public void SaveFile(string fileName)
-    {
-        
-        using (StreamWriter sw = new StreamWriter(fileName))
-        foreach (Entry entry in _entries)
-        {
-            sw.WriteLine("");
-            sw.WriteLine($"Date: {entry._date} - Prompt: {entry._prompt}");
-            sw.WriteLine($"Response: {entry._response}");
-        }      
-    }
-
-    public void LoadFile(string fileName)
-    {
-        string[] lines = System.IO.File.ReadAllLines(fileName);
-
-        foreach (string line in lines)
-        {
-            Console.WriteLine(line);
-
-        }
-    }
+    }    
 
     public void WriteToFile(string filename)
     {
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
+
             foreach(Entry entry in _entries)
             {
                 outputFile.WriteLine(entry.CreateFileSystemString());
             }
+        }
+    }
+
+    public void ReadFromFile (string fileName)
+    {
+        string[] lines = System.IO.File.ReadAllLines(fileName);
+
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split("#");
+
+            string date = parts[0];
+            string question = parts[1];
+            string entryText = parts[2];
+
+            Entry entry = new Entry();
+            /* entry.DisplayJournalEntry(date, question, entryText);*/
+            
+            entry._date = date;
+            entry._prompt = question;
+            entry._response = entryText;
+            entry.DisplayEntryDetails();
+            _entries.Add(entry);
         }
     }
 }

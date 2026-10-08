@@ -20,4 +20,14 @@ public class Entry
         outputString = $"{_date}#{_prompt}#{_response}";
         return outputString;
     }
+
+    public void DisplayJournalEntry(string date, string prompt, string response)
+    {
+        Console.WriteLine("");
+        Console.WriteLine($"Date: {date} - Prompt: {prompt}");
+        Console.WriteLine($"Response: {response}");
+    }
+    /* create a fucntion to populate the entries fields with the data I got from the file, and return a new entry.
+    return new Entry(date, prompt, entry) static Entry ....
+    */
 }
