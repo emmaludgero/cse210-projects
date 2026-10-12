@@ -1,0 +1,3 @@
+UML Diagram
+Public you use the + sign
+Private date you use the - sign
