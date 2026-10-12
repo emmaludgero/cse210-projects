@@ -1,3 +1,5 @@
 UML Diagram
 Public you use the + sign
 Private date you use the - sign
+
+Constructors are a special method, which doensn't have any return objects, be public, and have the same name than the class' name
