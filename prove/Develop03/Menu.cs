@@ -12,7 +12,6 @@ class Menu
         Console.WriteLine("2. Medium - two words at a time, medium scripture");
         Console.WriteLine("3. Hard - three words at a time, large scripture");
     }
-
     public void DisplayMenuChoice()
     {
         int levelChoice = ChooseOption();
@@ -38,7 +37,7 @@ class Menu
         string rf = reference.DisplayReference();
         scripture.DisplayScripture(rf);
         Word words = new Word(shortVerse);
-
+        scripture.DisplayScriptureGame(words, rf, 1);
     }
     public void DisplayLevel2()
     {
@@ -48,9 +47,8 @@ class Menu
         string rf = reference.DisplayBigReference();
         scripture.DisplayScripture(rf);
         Word words = new Word(mediumVerse);
-
+        scripture.DisplayScriptureGame(words, rf, 2);
     }
-
     public void DisplayLevel3()
     {
         string largeVerse = "And now, my sons, remember, remember that it is upon the rock of our Redeemer, who is Christ, the Son of God, that ye must build your foundation; that when the devil shall send forth his mighty winds, yea, his shafts in the whirlwind, yea, when all his hail and his mighty storm shall beat upon you, it shall have no power over you to drag you down to the gulf of misery and endless wo, because of the rock upon which ye are built, which is a sure foundation, a foundation whereon if men build they cannot fall.";
@@ -59,7 +57,7 @@ class Menu
         string rf = reference.DisplayReference();
         scripture.DisplayScripture(rf);
         Word words = new Word(largeVerse);
-
+        scripture.DisplayScriptureGame(words, rf, 3);
     }
     public int ChooseOption()
     {
