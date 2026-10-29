@@ -18,7 +18,7 @@ public class ReflectingActivity : Activity{
         "How can you keep this experience in mind in the future?"
     };
     
-    public ReflectingActivity(string acitivityName, string description) : base (acitivityName, description){
+    public ReflectingActivity(string activityName, string description) : base (activityName, description){
     }
     public ReflectingActivity(string acitivityName, string description, List<string> promptList, List<string> reflectionQuestionsList) : base (acitivityName, description)
     {
