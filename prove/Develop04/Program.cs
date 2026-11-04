@@ -60,7 +60,7 @@ class Program
                 activity3.DisplayEndindMessage();
             }
         }
-        Activity activity = new Activity("test", "test");
+        Activity activity = new Activity();
         activity.DisplayBye();
     }
 }

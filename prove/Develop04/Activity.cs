@@ -11,6 +11,11 @@ public class Activity
         _description = description;
     }
 
+    public Activity()
+    {
+        _activityName = "base";
+        _description = "base";
+    }
     public void DisplayStartingMessage()
     {
         Console.WriteLine($"Welcome to the {_activityName}");
