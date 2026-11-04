@@ -1,16 +1,18 @@
-public class Activity {
+public class Activity
+{
 
     protected string _activityName;
     protected string _description;
     protected int _duration;
-
+    protected static int _counter = 0;
     public Activity(string activityName, string description)
     {
         _activityName = activityName;
         _description = description;
     }
 
-    public void DisplayStartingMessage(){
+    public void DisplayStartingMessage()
+    {
         Console.WriteLine($"Welcome to the {_activityName}");
         Console.WriteLine("");
         Console.WriteLine($"{_description}");
@@ -21,43 +23,57 @@ public class Activity {
         _duration = _duration * 100;
     }
 
-    public void DisplayEndindMessage(){
-        
+    public void DisplayEndindMessage()
+    {
+
         PausingSpinner("Well done!");
         Console.WriteLine("");
         _duration = _duration / 100;
         Console.WriteLine($"You have completed another {_duration} seconds of the {_activityName}.");
         PausingSpinner("");
+        _counter++;
     }
 
-    public void PausingSpinner(string message){
+    public void DisplayBye()
+    {
+        Console.WriteLine($"Thank you for joining us in our Mindfulness Program.");
+        if (_counter > 1)
+        {
+            Console.WriteLine($"You have completed {_counter} activities.");
+        } else
+        Console.WriteLine($"You have completed {_counter} activity.");
+    }
+
+    public void PausingSpinner(string message)
+    {
         Console.WriteLine(message);
         Console.Write("|");
         Thread.Sleep(700);
-        Console.Write("\b \b"); 
-        Console.Write("/"); 
+        Console.Write("\b \b");
+        Console.Write("/");
         Thread.Sleep(700);
         Console.Write("\b \b");
-        Console.Write("-"); 
+        Console.Write("-");
         Thread.Sleep(700);
         Console.Write("\b \b");
-        Console.Write("|"); 
+        Console.Write("|");
         Thread.Sleep(700);
         Console.Write("\b \b");
-        Console.Write("/"); 
+        Console.Write("/");
         Thread.Sleep(700);
         Console.Write("\b \b");
-        Console.Write("-"); 
+        Console.Write("-");
         Thread.Sleep(700);
         Console.Write("\b \b");
-        Console.Write("|"); 
+        Console.Write("|");
         Thread.Sleep(700);
         Console.Write("\b \b");
         Console.Write("");
     }
 
-    public void PausingCountdown(){
-        for (int i = 5; i>0; i--)
+    public void PausingCountdown()
+    {
+        for (int i = 5; i > 0; i--)
         {
             Console.Write(i);
             Thread.Sleep(1000);

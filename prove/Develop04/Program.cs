@@ -1,11 +1,11 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Mindfulness Program");
-
         var numberChoice = 0;
         while (numberChoice != 4){
             Console.WriteLine("");
@@ -60,5 +60,7 @@ class Program
                 activity3.DisplayEndindMessage();
             }
         }
+        Activity activity = new Activity("test", "test");
+        activity.DisplayBye();
     }
 }
