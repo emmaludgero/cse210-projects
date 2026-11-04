@@ -10,7 +10,6 @@ public class Activity
         _activityName = activityName;
         _description = description;
     }
-
     public Activity()
     {
         _activityName = "base";
